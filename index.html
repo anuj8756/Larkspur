@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Larkspur Paint | Color, inspiration and paint for every room</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <defs>
+            <filter id="b2">
+                <feGaussianBlur stdDeviation="2" />
+            </filter>
+            <filter id="b6" x="-30%" y="-30%" width="160%" height="160%">
+                <feGaussianBlur stdDeviation="6" />
+            </filter>
+            <filter id="b16" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="16" />
+            </filter>
+            <filter id="gr" x="0" y="0" width="100%" height="100%">
+                <feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" stitchTiles="stitch" />
+                <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .3 0 0 0 0" />
+            </filter>
+            <radialGradient id="wr" cx=".22" cy=".25" r=".95">
+                <stop offset="0" stop-color="#fff" stop-opacity=".38" />
+                <stop offset=".55" stop-color="#fff" stop-opacity="0" />
+                <stop offset="1" stop-color="#000" stop-opacity=".34" />
+            </radialGradient>
+            <radialGradient id="vg" cx=".5" cy=".5" r=".75">
+                <stop offset=".62" stop-color="#000" stop-opacity="0" />
+                <stop offset="1" stop-color="#000" stop-opacity=".38" />
+            </radialGradient>
+            <radialGradient id="glow">
+                <stop offset="0" stop-color="#ffe6a8" stop-opacity=".9" />
+                <stop offset="1" stop-color="#ffe6a8" stop-opacity="0" />
+            </radialGradient>
+            <radialGradient id="bush" cx=".35" cy=".3" r=".8">
+                <stop offset="0" stop-color="#86c474" />
+                <stop offset="1" stop-color="#2a5a2b" />
+            </radialGradient>
+            <linearGradient id="fl" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#cfa877" />
+                <stop offset="1" stop-color="#8a6541" />
+            </linearGradient>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#6fb1e4" />
+                <stop offset="1" stop-color="#fde9c9" />
+            </linearGradient>
+            <linearGradient id="sfg" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#587584" />
+                <stop offset="1" stop-color="#2c404a" />
+            </linearGradient>
+            <linearGradient id="wd" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#a97b4e" />
+                <stop offset="1" stop-color="#6d4a2b" />
+            </linearGradient>
+            <linearGradient id="cur" x1="0" x2=".09" y1="0" y2="0" spreadMethod="reflect">
+                <stop offset="0" stop-color="#f3ede2" />
+                <stop offset="1" stop-color="#cbc2b2" />
+            </linearGradient>
+            <linearGradient id="beam" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#fff6d6" stop-opacity=".75" />
+                <stop offset="1" stop-color="#fff6d6" stop-opacity="0" />
+            </linearGradient>
+            <linearGradient id="lin" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#fff" />
+                <stop offset="1" stop-color="#d9d6cf" />
+            </linearGradient>
+            <linearGradient id="gls" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#d9eefb" />
+                <stop offset="1" stop-color="#8fbfde" />
+            </linearGradient>
+            <pattern id="pl" width="90" height="30" patternUnits="userSpaceOnUse">
+                <path d="M0 .5H90M45 0V30" stroke="#000" stroke-opacity=".2" />
+            </pattern>
+            <pattern id="tl" width="30" height="16" patternUnits="userSpaceOnUse">
+                <rect width="30" height="16" fill="#fbf9f4" />
+                <path d="M0 .5H30M15 0V16" stroke="#b9b2a2" stroke-opacity=".6" />
+            </pattern>
+            <pattern id="sh" width="24" height="12" patternUnits="userSpaceOnUse">
+                <path d="M0 11.5H24" stroke="#000" stroke-opacity=".3" />
+                <path d="M12 0V12" stroke="#000" stroke-opacity=".2" />
+            </pattern>
+        </defs>
+    </svg>
+    <header>
+        <div class="wrap bar">
+            <a class="logo" href="#"><i></i>Larkspur</a>
+            <nav aria-label="Main"><a href="#color">Color</a><a href="#rooms">Inspiration</a><a
+                    href="#visualizer">Visualizer</a><a href="#calculator">Calculator</a><a href="#tips">Tips &amp;
+                    resources</a></nav>
+            <div class="util"><a href="#">Blog</a><a href="#">Customer service</a><a href="#">Find a store</a></div>
+        </div>
+    </header>
+    <main>
+        <section class="hero" id="color">
+            <div class="wrap hg">
+                <div>
+                    <h1>Find the color that feels like home</h1>
+                    <p class="s">Pick a shade and watch every room on this page repaint. Then order a peel-and-stick
+                        sample to try it on your own wall.</p>
+                    <p class="picked" aria-live="polite"><span id="cname">Fern Hollow</span><small
+                            id="ccode">LP-214</small></p>
+                    <div class="chips" id="chips" role="group" aria-label="Wall colors"></div>
+                    <a class="btn" href="#rooms">Explore all colors</a>
+                </div>
+                <div class="stage">
+                    <div class="room"><svg viewBox="0 0 640 480" role="img"
+                            aria-label="A sunlit living room with a painted wall">
+                            <rect class="w" width="640" height="340" />
+                            <rect width="640" height="340" fill="url(#wr)" />
+                            <rect width="640" height="340" filter="url(#gr)" />
+                            <rect y="340" width="640" height="140" fill="url(#fl)" />
+                            <rect y="340" width="640" height="140" fill="url(#pl)" />
+                            <rect y="330" width="640" height="14" fill="#f7f5f0" />
+                            <rect y="344" width="640" height="8" fill="#000" opacity=".22" filter="url(#b2)" />
+                            <rect x="50" y="56" width="180" height="230" fill="#000" opacity=".3" filter="url(#b6)"
+                                transform="translate(8 8)" />
+                            <rect x="56" y="62" width="168" height="218" fill="url(#gls)" />
+                            <path d="M56 240Q110 190 150 220T224 200V280H56z" fill="#6fa36a" filter="url(#b2)" />
+                            <circle cx="190" cy="100" r="22" fill="#fff7d0" filter="url(#b6)" />
+                            <rect x="56" y="62" width="168" height="218" fill="none" stroke="#f7f5f0"
+                                stroke-width="12" />
+                            <path d="M140 62v218M56 170h168" stroke="#f7f5f0" stroke-width="6" />
+                            <rect x="18" y="40" width="44" height="275" fill="url(#cur)" />
+                            <rect x="218" y="40" width="44" height="275" fill="url(#cur)" />
+                            <rect x="10" y="34" width="260" height="8" rx="4" fill="#3a2f26" />
+                            <path d="M120 286 L330 340 L520 420 L250 420 L70 340z" fill="url(#beam)" opacity=".8"
+                                filter="url(#b6)" transform="translate(40 40)" />
+                            <rect x="420" y="74" width="170" height="124" fill="#000" opacity=".3" filter="url(#b6)"
+                                transform="translate(6 8)" />
+                            <rect x="416" y="70" width="170" height="124" fill="#f7f5f0" />
+                            <rect x="428" y="82" width="146" height="100" fill="#e9d2ae" />
+                            <circle cx="500" cy="128" r="30" fill="#c77b4e" />
+                            <path d="M428 182L480 136 520 166 574 120V182z" fill="#46604a" />
+                            <ellipse cx="410" cy="432" rx="230" ry="30" fill="#000" opacity=".25" filter="url(#b6)" />
+                            <ellipse cx="400" cy="425" rx="220" ry="30" fill="#efe3cf" />
+                            <ellipse cx="400" cy="425" rx="190" ry="22" fill="none" stroke="#c7ad82" stroke-width="3"
+                                stroke-dasharray="10 6" />
+                            <ellipse cx="410" cy="372" rx="200" ry="14" fill="#000" opacity=".4" filter="url(#b6)" />
+                            <rect x="232" y="256" width="350" height="116" rx="18" fill="url(#sfg)" />
+                            <rect x="216" y="290" width="46" height="90" rx="16" fill="#3b525d" />
+                            <rect x="552" y="290" width="46" height="90" rx="16" fill="#3b525d" />
+                            <rect x="266" y="270" width="124" height="62" rx="13" fill="#6b8895" />
+                            <rect x="398" y="270" width="124" height="62" rx="13" fill="#6b8895" />
+                            <rect x="232" y="256" width="350" height="116" rx="18" filter="url(#gr)" />
+                            <rect x="286" y="246" width="58" height="48" rx="9" fill="#e5a657"
+                                transform="rotate(-9 315 270)" />
+                            <rect x="470" y="250" width="54" height="46" rx="9" fill="#f3ebdc"
+                                transform="rotate(8 497 273)" />
+                            <rect x="250" y="372" width="9" height="24" fill="#1b1b1b" />
+                            <rect x="556" y="372" width="9" height="24" fill="#1b1b1b" />
+                            <rect x="296" y="398" width="220" height="10" rx="3" fill="#000" opacity=".35"
+                                filter="url(#b2)" transform="translate(0 28)" />
+                            <rect x="290" y="392" width="232" height="14" rx="4" fill="url(#wd)" />
+                            <rect x="300" y="406" width="9" height="24" fill="#5b3c22" />
+                            <rect x="503" y="406" width="9" height="24" fill="#5b3c22" />
+                            <rect x="320" y="378" width="50" height="14" fill="#2f4a63" />
+                            <rect x="326" y="368" width="40" height="10" fill="#c98b5e" />
+                            <rect x="470" y="366" width="18" height="26" rx="4" fill="#fff" />
+                            <path
+                                d="M415 392c-10-40-4-70 8-90 4 30 14 55-8 90zM415 392c24-20 34-50 26-78-18 18-32 44-26 78zM415 392c-26-14-40-40-34-66 18 12 32 34 34 66z"
+                                fill="#4a8a45" />
+                            <rect x="404" y="384" width="22" height="10" rx="3" fill="#f0e8d8" />
+                            <ellipse cx="616" cy="405" rx="18" ry="5" fill="#000" opacity=".35" filter="url(#b2)" />
+                            <rect x="612" y="282" width="8" height="122" fill="#222" />
+                            <path d="M590 288h50l-10-46h-30z" fill="#f9e9b9" />
+                            <circle cx="615" cy="270" r="60" fill="url(#glow)" opacity=".55" />
+                            <rect width="640" height="480" fill="url(#vg)" />
+                        </svg></div>
+                    <div class="tag"><b></b>
+                        <div id="tname">Fern Hollow<small>Interior eggshell</small></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec" id="rooms">
+            <div class="wrap">
+                <h2>See it in every room</h2>
+                <p class="lede">These scenes use the color you picked above. Click a tile to jump back and try another.
+                </p>
+                <div class="gal"><button class="tile" onclick="location.hash='color'"><svg viewBox="0 0 400 500"
+                            preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                            <rect class="w" width="400" height="360" />
+                            <rect width="400" height="360" fill="url(#wr)" />
+                            <rect width="400" height="360" filter="url(#gr)" />
+                            <rect y="360" width="400" height="140" fill="url(#fl)" />
+                            <rect y="360" width="400" height="140" fill="url(#pl)" />
+                            <rect y="350" width="400" height="12" fill="#f7f5f0" />
+                            <rect x="250" y="50" width="110" height="150" fill="url(#gls)" />
+                            <rect x="250" y="50" width="110" height="150" fill="none" stroke="#f7f5f0"
+                                stroke-width="9" />
+                            <path d="M305.0 50v150" stroke="#f7f5f0" stroke-width="5" />
+                            <rect x="232" y="40" width="30" height="190" fill="url(#cur)" />
+                            <rect x="348" y="40" width="30" height="190" fill="url(#cur)" />
+                            <rect x="48" y="80" width="130" height="86" fill="#f7f5f0" />
+                            <rect x="58" y="90" width="110" height="66" fill="#e9d2ae" />
+                            <circle cx="113" cy="122" r="20" fill="#c77b4e" />
+                            <ellipse cx="170" cy="432" rx="190" ry="28" fill="#000" opacity=".3" filter="url(#b6)" />
+                            <rect x="20" y="190" width="300" height="130" rx="14" fill="#5b4a3f" />
+                            <rect x="20" y="190" width="300" height="130" rx="14" filter="url(#gr)" />
+                            <rect x="14" y="290" width="312" height="110" rx="14" fill="url(#lin)" />
+                            <path d="M30 330Q170 312 310 330M30 362Q170 346 310 362" stroke="#000" stroke-opacity=".12"
+                                stroke-width="3" fill="none" />
+                            <rect x="14" y="340" width="312" height="60" rx="10" fill="#e5a657" opacity=".9" />
+                            <rect x="14" y="340" width="312" height="60" rx="10" filter="url(#gr)" />
+                            <rect x="36" y="262" width="110" height="52" rx="16" fill="#fff" />
+                            <rect x="190" y="262" width="110" height="52" rx="16" fill="#f3ebdc" />
+                            <rect x="68" y="250" width="70" height="44" rx="10" fill="#2f4a63" />
+                            <rect x="336" y="320" width="56" height="80" rx="4" fill="url(#wd)" />
+                            <rect x="346" y="290" width="36" height="30" fill="#f9e9b9" />
+                            <circle cx="364" cy="292" r="55" fill="url(#glow)" />
+                            <rect width="400" height="500" fill="url(#vg)" />
+                        </svg><span>Bedroom<small>Calm, low-light shades</small></span></button><button class="tile"
+                        onclick="location.hash='color'"><svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice"
+                            aria-hidden="true">
+                            <rect class="w" width="400" height="340" />
+                            <rect width="400" height="340" fill="url(#wr)" />
+                            <rect width="400" height="340" filter="url(#gr)" />
+                            <rect y="340" width="400" height="160" fill="#e4dccd" />
+                            <path d="M0 400H400M0 450H400" stroke="#000" stroke-opacity=".1" />
+                            <rect x="0" y="130" width="400" height="120" fill="url(#tl)" />
+                            <rect x="0" y="130" width="400" height="120" fill="url(#wr)" opacity=".6" />
+                            <rect x="20" y="40" width="110" height="74" rx="3" fill="#2f4a63" />
+                            <rect x="270" y="40" width="110" height="74" rx="3" fill="#2f4a63" />
+                            <path d="M75 60v6M325 60v6" stroke="#d9c79a" stroke-width="4" />
+                            <rect x="150" y="44" width="100" height="70" fill="url(#gls)" />
+                            <rect x="150" y="44" width="100" height="70" fill="none" stroke="#f7f5f0"
+                                stroke-width="9" />
+                            <path d="M200.0 44v70" stroke="#f7f5f0" stroke-width="5" />
+                            <rect x="0" y="250" width="400" height="100" fill="#2f4a63" />
+                            <path d="M100 250v100M200 250v100M300 250v100" stroke="#000" stroke-opacity=".3" />
+                            <g fill="#d9c79a">
+                                <rect x="86" y="268" width="6" height="18" />
+                                <rect x="186" y="268" width="6" height="18" />
+                                <rect x="286" y="268" width="6" height="18" />
+                            </g>
+                            <rect x="0" y="242" width="400" height="12" fill="#f4f1ea" />
+                            <rect x="0" y="254" width="400" height="8" fill="#000" opacity=".3" filter="url(#b2)" />
+                            <path d="M90 0v130M200 0v150M310 0v130" stroke="#222" stroke-width="3" />
+                            <circle cx="90" cy="140" r="18" fill="#f7e7b4" />
+                            <circle cx="200" cy="160" r="18" fill="#f7e7b4" />
+                            <circle cx="310" cy="140" r="18" fill="#f7e7b4" />
+                            <g fill="url(#glow)">
+                                <circle cx="90" cy="145" r="55" />
+                                <circle cx="200" cy="165" r="55" />
+                                <circle cx="310" cy="145" r="55" />
+                            </g>
+                            <ellipse cx="200" cy="452" rx="190" ry="20" fill="#000" opacity=".3" filter="url(#b6)" />
+                            <rect x="30" y="380" width="340" height="70" fill="#f9f6f0" />
+                            <rect x="30" y="362" width="340" height="22" fill="#e9e6e0" />
+                            <path d="M60 372q60-6 120 2t160-4" stroke="#9a9a9a" stroke-opacity=".4" fill="none" />
+                            <rect x="30" y="362" width="340" height="22" filter="url(#gr)" />
+                            <rect x="60" y="388" width="100" height="56" fill="#fff" stroke="#cfcabd" />
+                            <rect x="240" y="388" width="100" height="56" fill="#fff" stroke="#cfcabd" />
+                            <rect x="190" y="400" width="20" height="5" fill="#d9c79a" />
+                            <rect x="90" y="330" width="40" height="32" rx="6" fill="#c98b5e" />
+                            <path d="M110 330c-20-26-14-50 0-66 8 18 22 40 0 66z" fill="#4a8a45" />
+                            <rect width="400" height="500" fill="url(#vg)" />
+                        </svg><span>Kitchen<small>Fresh, easy to clean</small></span></button><button class="tile"
+                        onclick="location.hash='color'"><svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice"
+                            aria-hidden="true">
+                            <rect width="400" height="500" fill="url(#sky)" />
+                            <circle cx="320" cy="90" r="40" fill="#fff7d0" filter="url(#b6)" />
+                            <ellipse cx="100" cy="90" rx="70" ry="16" fill="#fff" opacity=".8" filter="url(#b6)" />
+                            <ellipse cx="210" cy="60" rx="50" ry="12" fill="#fff" opacity=".7" filter="url(#b6)" />
+                            <path d="M0 300Q100 240 200 290T400 270V420H0z" fill="#7aa97a" filter="url(#b2)" />
+                            <rect y="400" width="400" height="100" fill="#5f9b58" />
+                            <path d="M0 440H400M0 470H400" stroke="#000" stroke-opacity=".08" stroke-width="10" />
+                            <path d="M170 410L200 500H120z" fill="#d8cdb6" />
+                            <ellipse cx="200" cy="415" rx="150" ry="14" fill="#000" opacity=".3" filter="url(#b6)" />
+                            <rect x="50" y="210" width="300" height="205" class="w" />
+                            <rect x="50" y="210" width="300" height="205" fill="url(#wr)" />
+                            <rect x="50" y="210" width="300" height="205" filter="url(#gr)" />
+                            <rect x="50" y="210" width="300" height="22" fill="#000" opacity=".35" filter="url(#b6)" />
+                            <path d="M26 216L200 100 374 216z" fill="#4a3a33" />
+                            <path d="M26 216L200 100 374 216z" fill="url(#sh)" />
+                            <path d="M26 216L200 100 374 216z" fill="url(#wr)" />
+                            <rect x="168" y="305" width="64" height="110" fill="#f7f5f0" />
+                            <rect x="176" y="313" width="48" height="102" fill="#a9703c" />
+                            <circle cx="215" cy="365" r="3" fill="#e6c97a" />
+                            <g>
+                                <rect x="80" y="250" width="62" height="64" fill="#f7f5f0" />
+                                <rect x="88" y="258" width="46" height="48" fill="url(#gls)" />
+                                <rect x="258" y="250" width="62" height="64" fill="#f7f5f0" />
+                                <rect x="266" y="258" width="46" height="48" fill="url(#gls)" />
+                            </g>
+                            <rect x="80" y="314" width="62" height="10" fill="#000" opacity=".25" filter="url(#b2)" />
+                            <circle cx="110" cy="412" r="30" fill="url(#bush)" />
+                            <circle cx="85" cy="420" r="24" fill="url(#bush)" />
+                            <circle cx="290" cy="412" r="30" fill="url(#bush)" />
+                            <circle cx="318" cy="420" r="24" fill="url(#bush)" />
+                            <rect x="6" y="330" width="9" height="90" fill="#5a3b25" />
+                            <circle cx="12" cy="300" r="44" fill="url(#bush)" />
+                            <rect width="400" height="500" fill="url(#vg)" />
+                        </svg><span>Exterior<small>Curb appeal that lasts</small></span></button><button class="tile"
+                        onclick="location.hash='color'"><svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice"
+                            aria-hidden="true">
+                            <rect class="w" width="400" height="360" />
+                            <rect width="400" height="360" fill="url(#wr)" />
+                            <rect width="400" height="360" filter="url(#gr)" />
+                            <rect y="360" width="400" height="140" fill="url(#fl)" />
+                            <rect y="360" width="400" height="140" fill="url(#pl)" />
+                            <rect y="350" width="400" height="12" fill="#f7f5f0" />
+                            <rect x="110" y="50" width="180" height="140" fill="url(#gls)" />
+                            <rect x="110" y="50" width="180" height="140" fill="none" stroke="#f7f5f0"
+                                stroke-width="9" />
+                            <path d="M200.0 50v140" stroke="#f7f5f0" stroke-width="5" />
+                            <rect x="0" y="330" width="0" height="0" />
+                            <rect x="20" y="210" width="80" height="6" fill="url(#wd)" />
+                            <g>
+                                <rect x="26" y="180" width="10" height="30" fill="#c2553d" />
+                                <rect x="37" y="176" width="9" height="34" fill="#2f4a63" />
+                                <rect x="47" y="184" width="11" height="26" fill="#e5a657" />
+                                <rect x="59" y="178" width="9" height="32" fill="#4a8a45" />
+                                <rect x="69" y="186" width="10" height="24" fill="#f3ebdc" />
+                            </g>
+                            <rect x="300" y="210" width="80" height="6" fill="url(#wd)" />
+                            <rect x="310" y="190" width="28" height="20" fill="#7a5a72" />
+                            <rect x="342" y="184" width="26" height="26" fill="#f3ebdc" />
+                            <rect x="40" y="300" width="320" height="14" rx="3" fill="url(#wd)" />
+                            <rect x="40" y="314" width="320" height="10" fill="#000" opacity=".3" filter="url(#b6)" />
+                            <rect x="58" y="314" width="12" height="110" fill="#5b3c22" />
+                            <rect x="330" y="314" width="12" height="110" fill="#5b3c22" />
+                            <rect x="150" y="230" width="110" height="68" rx="5" fill="#15191c" />
+                            <rect x="156" y="236" width="98" height="54" fill="#8fc3e6" />
+                            <path d="M156 290L190 258 215 278 235 250 254 290z" fill="#3c6b8a" />
+                            <rect x="198" y="298" width="14" height="6" fill="#15191c" />
+                            <circle cx="205" cy="262" r="80" fill="url(#glow)" opacity=".25" />
+                            <rect x="290" y="276" width="18" height="24" rx="3" fill="#f3ebdc" />
+                            <path d="M299 276c-14-20-8-36 0-46 6 12 14 28 0 46z" fill="#4a8a45" />
+                            <rect x="80" y="282" width="40" height="18" fill="#c2553d" />
+                            <ellipse cx="200" cy="448" rx="100" ry="14" fill="#000" opacity=".3" filter="url(#b6)" />
+                            <rect x="150" y="360" width="100" height="70" rx="18" fill="#2f4a63" />
+                            <rect x="160" y="336" width="80" height="60" rx="14" fill="#3a5a77" />
+                            <rect x="196" y="430" width="8" height="18" fill="#1b1b1b" />
+                            <rect width="400" height="500" fill="url(#vg)" />
+                        </svg><span>Home office<small>Focused, never flat</small></span></button></div>
+            </div>
+        </section>
+
+        <section class="sec alt">
+            <div class="wrap">
+                <div class="coty">
+                    <div class="txt">
+                        <h2>The 2027 color of the year is Olive Ground</h2>
+                        <p>A quiet, earthy green that brings the calm of a long walk outside into the room. Order a
+                            peel-and-stick sample and live with it for a week.</p><a class="btn" href="#color">See Olive
+                            Ground</a>
+                    </div>
+                    <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="og" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0" stop-color="#7b8b57" />
+                                <stop offset="1" stop-color="#4a5730" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="400" height="400" fill="url(#og)" />
+                        <g fill="#fff" opacity=".13">
+                            <path d="M80 380C30 300 50 200 130 140c40 80 10 180-50 240z" />
+                            <path d="M220 400C180 300 230 200 320 160c20 100-20 190-100 240z" />
+                            <path d="M330 240C300 180 330 110 390 90c10 70-20 130-60 150z" />
+                        </g>
+                        <g stroke="#fff" stroke-width="2" opacity=".25" fill="none">
+                            <path d="M80 380C90 300 110 220 130 140" />
+                            <path d="M220 400C240 320 280 240 320 160" />
+                        </g>
+                        <rect x="120" y="250" width="160" height="110" rx="14" fill="#fff" />
+                        <rect x="132" y="262" width="136" height="60" rx="8" fill="#6b7a4a" /><text x="136" y="346"
+                            font-family="Figtree,sans-serif" font-size="15" font-weight="600" fill="#2c3520">Olive
+                            Ground LP-T27</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec">
+            <div class="wrap">
+                <h2>Shop by the way you paint</h2>
+                <p class="lede">Start from a curated set, a room, or the outside of your house.</p>
+                <div class="cols">
+                    <div class="col"><a href="#">
+                            <div class="strip"><i style="background:#f3efe6"></i><i style="background:#d8d2c4"></i><i
+                                    style="background:#a9a392"></i><i style="background:#56534b"></i></div>
+                            <h3>Designer collection</h3>
+                            <p>The neutrals and accents designers recommend most often.</p>
+                        </a></div>
+                    <div class="col"><a href="#">
+                            <div class="strip"><i style="background:#c7d5d9"></i><i style="background:#8fb0b8"></i><i
+                                    style="background:#4e7d8a"></i><i style="background:#23404b"></i></div>
+                            <h3>Interior color</h3>
+                            <p>Living rooms, kitchens, bedrooms and everything between.</p>
+                        </a></div>
+                    <div class="col"><a href="#">
+                            <div class="strip"><i style="background:#e7c9a9"></i><i style="background:#c98b5e"></i><i
+                                    style="background:#9a5a3c"></i><i style="background:#5e3a2b"></i></div>
+                            <h3>Exterior refresh</h3>
+                            <p>Raise your curb appeal with weatherproof color.</p>
+                        </a></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec alt" id="tools">
+            <div class="wrap">
+                <h2>Tools that take out the guesswork</h2>
+                <p class="lede">Preview, sample and calculate before you open a can.</p>
+                <div class="tools">
+                    <div class="tool">
+                        <div class="ic"><svg viewBox="0 0 24 24">
+                                <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg></div>
+                        <h3>Color visualizer</h3>
+                        <p>Try any color on a photo of your own room.</p><a href="#visualizer">Open visualizer</a>
+                    </div>
+                    <div class="tool">
+                        <div class="ic"><svg viewBox="0 0 24 24">
+                                <rect x="4" y="4" width="16" height="16" rx="3" />
+                                <path d="M9 4v16" />
+                            </svg></div>
+                        <h3>Peel-and-stick samples</h3>
+                        <p>Real paint on a sticker. Move it around your walls.</p><a href="#">Order samples</a>
+                    </div>
+                    <div class="tool">
+                        <div class="ic"><svg viewBox="0 0 24 24">
+                                <rect x="5" y="3" width="14" height="18" rx="2" />
+                                <path d="M8 7h8M8 12h2M14 12h2M8 16h2M14 16h2" />
+                            </svg></div>
+                        <h3>Paint calculator</h3>
+                        <p>Enter room size and get gallons needed.</p><a href="#calculator">Calculate</a>
+                    </div>
+                    <div class="tool">
+                        <div class="ic"><svg viewBox="0 0 24 24">
+                                <path d="M4 5h7a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H4zM20 5h-6" />
+                            </svg></div>
+                        <h3>How-to guides</h3>
+                        <p>Prep, prime and paint like a pro.</p><a href="#tips">Read guides</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec" id="visualizer">
+            <div class="wrap">
+                <h2>Color visualizer</h2>
+                <p class="lede">Pick a room, then try any color on its walls. Use the color wheel for any shade you
+                    like.</p>
+                <div class="vz">
+                    <div>
+                        <div class="tabs" id="vtabs" role="tablist" aria-label="Rooms"></div>
+                        <div class="vstage" id="vstage"></div>
+                    </div>
+                    <aside class="panel">
+                        <p class="picked" aria-live="polite"><span id="vn">Fern Hollow</span><small
+                                id="vc">LP-214</small></p>
+                        <div class="chips" id="vchips" role="group" aria-label="Wall colors"></div>
+                        <label for="vcustom">Custom color <input type="color" id="vcustom" value="#8aa17c"></label>
+                        <div class="sw"></div>
+                        <p style="margin:0 0 16px;color:var(--mut)">Color code <b id="vhex"
+                                style="color:var(--fg)">#8AA17C</b></p>
+                        <button class="btn" id="vcopy" type="button">Copy color code</button>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec alt" id="calculator">
+            <div class="wrap">
+                <h2>Paint calculator</h2>
+                <p class="lede">Enter your room size and we will work out how much paint to buy. Coverage is about 350
+                    sq ft per gallon.</p>
+                <div class="calc">
+                    <div class="fields" id="cf">
+                        <label>Units<select id="u">
+                                <option value="ft">Feet</option>
+                                <option value="m">Meters</option>
+                            </select></label>
+                        <label>Coats<select id="co">
+                                <option>1</option>
+                                <option selected>2</option>
+                                <option>3</option>
+                            </select></label>
+                        <label>Room length<input id="L" type="number" min="0" step="any" value="14"></label>
+                        <label>Room width<input id="W" type="number" min="0" step="any" value="12"></label>
+                        <label>Wall height<input id="H" type="number" min="0" step="any" value="8"></label>
+                        <label>Price per gallon ($)<input id="P" type="number" min="0" step="any" value="38"></label>
+                        <label>Doors<input id="D" type="number" min="0" value="1"></label>
+                        <label>Windows<input id="Wn" type="number" min="0" value="2"></label>
+                        <label class="chk full"><input id="ce" type="checkbox">Also paint the ceiling</label>
+                    </div>
+                    <div class="res" aria-live="polite">
+                        <div>You need about</div>
+                        <div class="big"><span id="rg">0</span> gal</div>
+                        <dl>
+                            <dt>Paintable area</dt>
+                            <dd id="ra">0</dd>
+                            <dt>Suggested cans</dt>
+                            <dd id="rc">0</dd>
+                            <dt>In liters</dt>
+                            <dd id="rl">0</dd>
+                            <dt>Estimated cost</dt>
+                            <dd id="rp">0</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec" id="tips">
+            <div class="wrap">
+                <h2>Tips &amp; resources</h2>
+                <p class="lede">A short guide from prep to cleanup, plus a checklist you can tick off as you go.</p>
+                <div class="tp">
+                    <div>
+                        <details open>
+                            <summary>Prepare the room</summary>
+                            <p>Move furniture to the center and cover it and the floor with drop cloths. Remove outlet
+                                covers and tape off trim, window frames and ceilings.</p>
+                        </details>
+                        <details>
+                            <summary>Fix and clean the walls</summary>
+                            <p>Fill holes with spackle, sand smooth, then wipe dust and grease away with a damp cloth.
+                                Paint sticks best to clean, dry walls.</p>
+                        </details>
+                        <details>
+                            <summary>Prime when you need to</summary>
+                            <p>Prime bare drywall, stains and big color changes. A tinted primer close to your new color
+                                helps dark shades cover in fewer coats.</p>
+                        </details>
+                        <details>
+                            <summary>Test a sample first</summary>
+                            <p>Stick a sample on two walls and check it morning, afternoon and evening. Light changes
+                                color more than most people expect.</p>
+                        </details>
+                        <details>
+                            <summary>Cut in, then roll</summary>
+                            <p>Brush a 2-inch edge along corners and trim, then roll the wall in a W pattern. Keep a wet
+                                edge so the coats blend with no lap marks.</p>
+                        </details>
+                        <details>
+                            <summary>Clean up and store</summary>
+                            <p>Peel tape while the paint is slightly tacky. Wash brushes in warm soapy water and seal
+                                leftover paint tightly for touch-ups.</p>
+                        </details>
+                    </div>
+                    <div>
+                        <div class="card">
+                            <h3>Your painting checklist</h3><progress id="pg" max="7" value="0"></progress>
+                            <label class="ck"><input type="checkbox">Move furniture and cover floors</label><label
+                                class="ck"><input type="checkbox">Fill holes and sand smooth</label><label
+                                class="ck"><input type="checkbox">Wipe walls clean and dry</label><label
+                                class="ck"><input type="checkbox">Tape trim, outlets and edges</label><label
+                                class="ck"><input type="checkbox">Prime stains and bare spots</label><label
+                                class="ck"><input type="checkbox">Cut in edges, then roll walls</label><label
+                                class="ck"><input type="checkbox">Remove tape and clean tools</label>
+                        </div>
+                        <div class="card">
+                            <h3>Which sheen?</h3>
+                            <table>
+                                <tr>
+                                    <th>Sheen</th>
+                                    <th>Best for</th>
+                                </tr>
+                                <tr>
+                                    <td>Flat</td>
+                                    <td>Ceilings, low-traffic rooms</td>
+                                </tr>
+                                <tr>
+                                    <td>Matte</td>
+                                    <td>Bedrooms, living rooms</td>
+                                </tr>
+                                <tr>
+                                    <td>Eggshell</td>
+                                    <td>Hallways, family rooms</td>
+                                </tr>
+                                <tr>
+                                    <td>Satin</td>
+                                    <td>Kitchens, kids' rooms</td>
+                                </tr>
+                                <tr>
+                                    <td>Semi-gloss</td>
+                                    <td>Trim, doors, bathrooms</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="links"><a href="#">Find a painter</a><a href="#">Find a store</a><a href="#">Safety
+                                information</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec">
+            <div class="wrap qrow">
+                <blockquote class="quote">It's not just about the color on your wall. It's about how the room feels when
+                    you walk in.<cite>Head of Color, Larkspur</cite></blockquote>
+                <div>
+                    <h2 style="font-size:34px">Get color ideas in your inbox</h2>
+                    <p class="lede" style="margin-bottom:20px">New collections, offers and how-tos. Unsubscribe any
+                        time.</p>
+                    <form class="news"
+                        onsubmit="event.preventDefault();this.querySelector('button').textContent='Subscribed'"><label
+                            for="em" style="position:absolute;left:-9999px">Email address</label><input id="em"
+                            type="email" placeholder="Email address" required><button class="btn"
+                            type="submit">Subscribe</button></form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="wrap">
+            <div class="fgrid">
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Special offers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Colors</h4>
+                    <ul>
+                        <li><a href="#">All colors</a></li>
+                        <li><a href="#">Visualizer</a></li>
+                        <li><a href="#">Designer collection</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#">Interior paint</a></li>
+                        <li><a href="#">Exterior paint</a></li>
+                        <li><a href="#">Stains</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">How-to guides</a></li>
+                        <li><a href="#">Paint calculator</a></li>
+                        <li><a href="#">Find a painter</a></li>
+                        <li><a href="#">Find a store</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="fine">Larkspur is a fictional brand created as a design . Colors and content are placeholders.
+            </p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
